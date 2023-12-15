@@ -42,8 +42,13 @@ namespace Puzzles
                     }
                 }
             }
-
             return partNumberSum;
+        }
+
+        public static int Part2Solution(string[] input)
+        {
+
+            throw new NotImplementedException();
         }
 
         private static bool IsPartNumber(int numberLine, int numberStartPositon, int numberLenght, string[] input)
@@ -59,7 +64,7 @@ namespace Puzzles
                     // percorre desde um caráctere antes até um caractére depois
                     for(int cursorPosition = numberStartPositon - 1; cursorPosition <= numberStartPositon + numberLenght; cursorPosition++)
                     {
-                        if(cursorPosition >= 0 && cursorPosition < input[currentLine].Length)
+                        try
                         {
                             // checa se o caractére atual é um simbolo válido
                             if(input[currentLine][cursorPosition] != '.' && !int.TryParse(input[currentLine][cursorPosition].ToString(), out int _))
@@ -67,6 +72,7 @@ namespace Puzzles
                                 return true;
                             }
                         }
+                        catch(IndexOutOfRangeException){continue;}
                     }
                 }
             }
@@ -84,12 +90,6 @@ namespace Puzzles
             }
 
             return result;
-        }
-
-        public static int Part2Solution(string[] input)
-        {
-            
-            throw new NotImplementedException();
         }
     }
 }

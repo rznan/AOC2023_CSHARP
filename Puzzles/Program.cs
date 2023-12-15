@@ -1,7 +1,11 @@
 ﻿using Puzzles;
 using System.IO;
 
-Console.Clear();
+try { Console.Clear(); }
+catch (IOException)
+{
+    Console.WriteLine("--Não foi possível limpar o terminal");
+}
 Console.WriteLine("\n-----ADVENT OF CODE 2023-----\n");
 while (true)
 {
@@ -35,7 +39,7 @@ while (true)
                     input = File.ReadAllLines(".//Day03.txt");
                     Console.WriteLine("Day 3: Gear Ratios");
                     Console.WriteLine($"\tParte 1: \t{Day03.Part1Solution(input)}");
-                    //Console.WriteLine($"\tParte 2: \t{Day03.Part2Solution(input)}");
+                    Console.WriteLine($"\tParte 2: \t{Day03.Part2Solution(input)}");
                     break;
 
                 case 99: 
