@@ -41,7 +41,14 @@ while (true)
                     Console.WriteLine($"\tParte 1: \t{Day03.Part1Solution(input)}");
                     Console.WriteLine($"\tParte 2: \t{Day03.Part2Solution(input)}");
                     break;
-
+                
+                case 4:
+                    input = File.ReadAllLines(".//Day04.txt");
+                    Console.WriteLine("Day 4: Scratchcards ");
+                    Console.WriteLine($"\tParte 1: \t{Day04.Part1Solution(input)}");
+                    //Console.WriteLine($"\tParte 2: \t{Day04.Part2Solution(input)}");
+                    break;
+ 
                 case 99: 
                     System.Environment.Exit(0);
                     break;
