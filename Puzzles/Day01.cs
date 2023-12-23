@@ -71,9 +71,13 @@ namespace Puzzles
                         if(letterBuffer.Contains(spelledNumber))
                         {
                             numbersFound.Add(SpelledDigits[spelledNumber]);
-                            // removes the spelled number (and previous characters) from 
-                            // the buffer - prevents adding the same number multiple times
-                            letterBuffer = letterBuffer[(letterBuffer.IndexOf(spelledNumber) + spelledNumber.Length)..];
+                            // removes all but the last character of the spelled number
+                            // (and previous characters) from  the buffer - prevents 
+                            // adding the same number multiple times and still handles 
+                            // cases similar to 'twone'
+                            letterBuffer = letterBuffer[(letterBuffer.IndexOf(spelledNumber)
+                                                         + spelledNumber.Length
+                                                         - 1)..];
                             break;
                         }
                     }
