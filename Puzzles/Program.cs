@@ -11,7 +11,7 @@ while (true)
 {
     Console.Write
     (
-        "Selecione um dia: [99 - sair]\n" +
+        "Selecione um dia: [0 - sair]\n" +
         ">>> "
     );
     if(int.TryParse(Console.ReadLine(), out int opcao))
@@ -49,7 +49,7 @@ while (true)
                     //Console.WriteLine($"\tParte 2: \t{Day04.Part2Solution(input)}");
                     break;
  
-                case 99: 
+                case 0: 
                     System.Environment.Exit(0);
                     break;
 
