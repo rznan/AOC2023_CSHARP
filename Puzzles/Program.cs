@@ -48,6 +48,13 @@ while (true)
                     Console.WriteLine($"\tParte 1: \t{Day04.Part1Solution(input)}");
                     //Console.WriteLine($"\tParte 2: \t{Day04.Part2Solution(input)}");
                     break;
+
+                 case 5:
+                    input = File.ReadAllLines(".//Day05.txt");
+                    Console.WriteLine("Day 5: If You Give A Seed A Fertilizer");
+                    Console.WriteLine($"\tParte 1: \t{Day05.Part1Solution(input)}");
+                    //Console.WriteLine($"\tParte 2: \t{Day04.Part2Solution(input)}");
+                    break;
  
                 case 0: 
                     System.Environment.Exit(0);
